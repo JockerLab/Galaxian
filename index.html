@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Galaxian</title>
+        <meta charset="utf-8"/>
+        <script type="module" src="./dist/index.js"></script>
+        <link rel="stylesheet" href="./src/styles/css/style.css">
+        <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+	</head>
+    <body>
+        <div id="container">
+            <div id="background"></div>
+            <div id="start">
+                <p id="title">Galaxian</p>
+                <p id="hint">Press Enter to start game</p>
+            </div>
+            <div id="score-container">
+                <div id="score-title">
+                    SCORE
+                </div>
+                <div id="score">
+                    0
+                </div>
+            </div>
+            <canvas id="game-field" width="600px" height="900px"></canvas>
+            <div id="lives"></div>
+            <div id="levels"></div>
+            <img id="player" src="src/styles/img/player.png" style="display: none;"/>
+            <img id="enemy1" src="src/styles/img/enemy1.png" style="display: none;"/>
+            <img id="bullet" src="src/styles/img/bullet.png" style="display: none;"/>
+        </div>
+    </body>
+</html>

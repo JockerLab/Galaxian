@@ -1,0 +1,111 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Common Pixel";
+  color: white;
+}
+
+canvas {
+  position: absolute;
+  width: 600px;
+  height: 900px;
+}
+
+#container {
+    width: 600px;
+    height: 900px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#background {
+    width: 600px;
+    height: 3840px;
+    background-image: url("../img/background.jpg");
+    animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0, -960px);
+  }
+  100% {
+    transform: translate(0, 960px);
+  }
+}
+
+#start {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font-size: 6em;
+}
+
+#hint {
+  font-size: 1em;
+  animation: blink 1s linear infinite;
+}
+
+#score-container {
+  font-size: 2em;
+  position: absolute;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#score {
+  color: red;
+}
+
+#lives, #levels {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+}
+
+#lives {
+  left: 30px;
+}
+
+#levels {
+  right: 0;
+}
+
+.life {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/heart.png");
+  background-size: 40px 40px;
+  margin-left: -20px;
+}
+
+.level {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/flag.png");
+  background-size: 40px 40px;
+  margin-left: -25px;
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 30%;
+  }
+}
